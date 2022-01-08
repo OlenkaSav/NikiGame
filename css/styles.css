@@ -1,0 +1,111 @@
+:root {
+  --title-text-colour: hsl(244, 12%, 27%);
+  --primary-text-colour: #757575;
+  --accent-colour: #2196f3;
+  --background-color: rgb(178, 236, 130);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--primary-text-colour);
+  font-family: "Balsamiq Sans", cursive;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+.container {
+  width: 1200;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  outline: red solid 1px;
+}
+
+/* Header */
+.nav-header {
+  display: flex;
+}
+.logo-header {
+  font-size: 50px;
+}
+.nav-link > a {
+  font-size: 30px;
+  margin-left: 50px;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+.container.header {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #7fcff5,
+    #7fcff5 10px,
+    #c796f0 10px,
+    #c796f0 20px
+  );
+  height: 100px;
+  padding-top: 35px;
+}
+
+/* Alphabet list */
+.letter-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.letter {
+  position: relative;
+  overflow: hidden;
+}
+.letter-img {
+  width: 370px;
+  height: 270px;
+  object-fit: cover;
+}
+.letter-name {
+  font-size: 200px;
+  font-weight: 700;
+  color: #73dd55;
+}
+
+.letter:hover .overlay,
+.letter:focus .overlay {
+  transform: translatex(0);
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 149, 235, 0.5);
+
+  transform: translatex(-100%);
+  transition: transform 250ms ease;
+}
