@@ -155,12 +155,14 @@ body {
   font-size: 50px;
   font-weight: 700;
   line-height: 250px;
-  text-align: center;
   color: aqua;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .window-item.top:hover .rocket {
   animation-name: moverocket;
-  animation-duration: 2000ms;
+  animation-duration: 2500ms;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
