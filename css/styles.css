@@ -36,6 +36,7 @@ body {
   font-family: "Balsamiq Sans", cursive;
   font-size: 14px;
   letter-spacing: 0.03em;
+  user-select: none;
 }
 .container {
   width: 1200px;
@@ -84,6 +85,7 @@ body {
 
 .container.alphabet {
   padding-top: 20px;
+  height: auto;
 }
 
 .sheet-title {
@@ -152,27 +154,74 @@ body {
   overflow: hidden;
 }
 .text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 50px;
   font-weight: 700;
   line-height: 250px;
   color: aqua;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  text-transform: uppercase;
+  text-shadow: #757575;
 }
-.window-item.top:hover .rocket {
-  animation-name: moverocket;
-  animation-duration: 2500ms;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
+
 .rocket {
   position: absolute;
   display: flex;
-  width: 70px;
+  width: 90px;
   height: auto;
   left: 50%;
-  transform: translateX(-50%) translateY(200%);
+  transform: translateX(-50%) translateY(150%);
+}
+.window-item.top:hover .rocket {
+  animation-name: moverocket;
+  animation-duration: 2000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.train {
+  position: absolute;
+  display: flex;
+  width: 170px;
+  height: auto;
+  left: 101%;
+  top: 50%;
+  transform: translateX(0%) translateY(-50%);
+}
+.window-item.left:hover .train {
+  animation-name: movetrain;
+  animation-duration: 2000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.plane {
+  position: absolute;
+  display: flex;
+  width: 170px;
+  height: auto;
+  left: 0%;
+  top: 50%;
+  transform: translateX(-101%) translateY(-50%);
+}
+.window-item.right:hover .plane {
+  animation-name: moveplane;
+  animation-duration: 2000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.submarine {
+  position: absolute;
+  display: flex;
+  width: 160px;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%) translateY(-101%);
+}
+.window-item.bottom:hover .submarine {
+  animation-name: movesubmarine;
+  animation-duration: 2000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 .window-set {
   position: relative;
@@ -191,31 +240,36 @@ body {
 .left {
   margin-right: 250px;
 }
-/* .window-item:nth-child(1) {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.window-item:nth-child(2) {
-  top: 50%;
-  left: 0;
-  /* transform: translateY(-150%); */
-/* }
-.window-item:nth-child(3) {
-  top: 50%;
-  left: 200px;
-  transform: translateY(-150%);
-}
-.window-item:nth-child(4) {
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-} */
+
 @keyframes moverocket {
   0% {
     transform: translateX(-50%) translateY(200%);
   }
   100% {
     transform: translateX(-50%) translateY(-100%);
+  }
+}
+@keyframes movetrain {
+  0% {
+    transform: translateX(0%) translateY(-50%);
+  }
+  100% {
+    transform: translateX(-250%) translateY(-50%);
+  }
+}
+@keyframes moveplane {
+  0% {
+    transform: translateX(-101%) translateY(-50%);
+  }
+  100% {
+    transform: translateX(145%) translateY(-50%);
+  }
+}
+@keyframes movesubmarine {
+  0% {
+    transform: translateX(-50%) translateY(-101%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(210%);
   }
 }
