@@ -1,0 +1,14 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+
+  // outline: red solid 1px;
+}
+.container.main {
+  background-color: var(--background-color);
+  height: 100vh;
+}
+.container.nom {
+  height: 100%;
+}

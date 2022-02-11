@@ -16,72 +16,102 @@ p {
   margin: 0;
   padding: 0;
 }
-a {
-  text-decoration: none;
-}
+
 img {
   display: block;
   max-width: 100%;
+  width: 100%;
   height: auto;
 }
+
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 body {
-  margin: 0 auto;
-  background-color: white;
-  color: var(--primary-text-colour);
+  margin: 0;
+  background-color: whitesmoke;
+  color: #4e064e;
   font-family: "Balsamiq Sans", cursive;
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: 0.03em;
-  user-select: none;
-}
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 15px;
-
-  outline: red solid 1px;
 }
 
-/* -----------------Header----------------- */
+main h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+main p {
+  font-size: 30px;
+}
+
 .nav-header {
   display: flex;
   align-items: center;
-
   height: 100%;
 }
+
 .logo-header {
   font-size: 60px;
   font-weight: 700;
   line-height: 1.2;
 }
+
 .nav-link > a {
   font-size: 30px;
   margin-left: 50px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 .container.header {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    #7fcff5,
-    #7fcff5 10px,
-    #c796f0 10px,
-    #c796f0 20px
-  );
+  background-image: repeating-linear-gradient(-45deg, #7fcff5, #7fcff5 10px, #c796f0 10px, #c796f0 20px);
   height: 100px;
   padding-top: 20px;
 }
-/* -----------------Main---------------- */
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-header {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.nav-link > a {
+  font-size: 30px;
+  margin-left: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.container.header {
+  background-image: repeating-linear-gradient(-45deg, #7fcff5, #7fcff5 10px, #c796f0 10px, #c796f0 20px);
+  height: 100px;
+  padding-top: 20px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
 .container.main {
   background-color: var(--background-color);
   height: 100vh;
 }
 
-/* Alphabet list */
+.container.nom {
+  height: 100%;
+}
 
 .container.alphabet {
   padding-top: 20px;
@@ -94,11 +124,12 @@ body {
   margin: 0px auto 10px;
   text-align: center;
 }
+
 .letter-list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+  /* margin-left: -30px;
+  margin-top: -30px; */
 }
 
 .letter {
@@ -108,9 +139,8 @@ body {
   margin-top: 30px;
   flex-basis: calc((100% - 60px) / 3);
   height: 270px;
-  /* width: 370px;
-  height: 270px; */
 }
+
 .letter:nth-child(3n + 1) {
   margin-left: 0;
 }
@@ -119,9 +149,11 @@ body {
   /* width: 370px;
   height: 270px; */
   object-fit: cover;
-  flex-basis: calc((100% - 60px) / 3);
   height: 270px;
+  border: 5px solid royalblue;
+  border-radius: 30px;
 }
+
 .letter-name {
   font-size: 200px;
   font-weight: 700;
@@ -138,16 +170,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 30px;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(44, 149, 235, 0.5);
-
   transform: translatex(-100%);
   transition: transform 250ms ease;
 }
-/* ------------------Right-left------------- */
 
 .window-item {
   position: relative;
@@ -158,6 +189,7 @@ body {
   text-align: center;
   overflow: hidden;
 }
+
 .text {
   position: absolute;
   left: 50%;
@@ -178,12 +210,14 @@ body {
   left: 50%;
   transform: translateX(-50%) translateY(150%);
 }
+
 .window-item.top:hover .rocket {
   animation-name: moverocket;
   animation-duration: 2000ms;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+
 .train {
   position: absolute;
   display: flex;
@@ -193,12 +227,14 @@ body {
   top: 50%;
   transform: translateX(0%) translateY(-50%);
 }
+
 .window-item.left:hover .train {
   animation-name: movetrain;
   animation-duration: 2000ms;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+
 .plane {
   position: absolute;
   display: flex;
@@ -208,12 +244,14 @@ body {
   top: 50%;
   transform: translateX(-101%) translateY(-50%);
 }
+
 .window-item.right:hover .plane {
   animation-name: moveplane;
   animation-duration: 2000ms;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+
 .submarine {
   position: absolute;
   display: flex;
@@ -222,12 +260,14 @@ body {
   left: 50%;
   transform: translateX(-50%) translateY(-101%);
 }
+
 .window-item.bottom:hover .submarine {
   animation-name: movesubmarine;
   animation-duration: 2000ms;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+
 .window-set {
   position: relative;
   display: flex;
@@ -237,11 +277,13 @@ body {
   align-items: center;
   justify-content: space-around;
 }
+
 .left-right {
   display: flex;
   width: 100%;
   justify-content: center;
 }
+
 .left {
   margin-right: 250px;
 }
@@ -254,6 +296,7 @@ body {
     transform: translateX(-50%) translateY(-100%);
   }
 }
+
 @keyframes movetrain {
   0% {
     transform: translateX(0%) translateY(-50%);
@@ -262,6 +305,7 @@ body {
     transform: translateX(-250%) translateY(-50%);
   }
 }
+
 @keyframes moveplane {
   0% {
     transform: translateX(-101%) translateY(-50%);
@@ -270,6 +314,7 @@ body {
     transform: translateX(145%) translateY(-50%);
   }
 }
+
 @keyframes movesubmarine {
   0% {
     transform: translateX(-50%) translateY(-101%);
@@ -278,3 +323,64 @@ body {
     transform: translateX(-50%) translateY(210%);
   }
 }
+
+.wrapper {
+  display: grid;
+}
+
+.nombers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.nomber {
+  background-color: transparent;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.nomber:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: dodgerblue;
+  color: white;
+  border: 5px solid royalblue;
+  border-radius: 30px;
+  transform: rotateY(180deg);
+}
+
+.nomber__image {
+  object-fit: contain;
+  height: 400px;
+  border: 5px solid royalblue;
+  border-radius: 30px;
+}
+
+.flip__nomber {
+  font-size: 260px;
+  font-weight: 700;
+}
+/*# sourceMappingURL=main.css.map */

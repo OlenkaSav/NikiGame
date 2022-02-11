@@ -1,0 +1,28 @@
+.nav-header {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+}
+.logo-header {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.nav-link > a {
+  font-size: 30px;
+  margin-left: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.container.header {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #7fcff5,
+    #7fcff5 10px,
+    #c796f0 10px,
+    #c796f0 20px
+  );
+  height: 100px;
+  padding-top: 20px;
+}

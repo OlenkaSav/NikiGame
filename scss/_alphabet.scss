@@ -1,0 +1,68 @@
+.container.alphabet {
+  padding-top: 20px;
+  height: auto;
+}
+
+.sheet-title {
+  font-size: 30px;
+  letter-spacing: 1.2;
+  margin: 0px auto 10px;
+  text-align: center;
+}
+.letter-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-left: -30px;
+  margin-top: -30px; */
+}
+
+.letter {
+  position: relative;
+  overflow: hidden;
+  margin-left: 30px;
+  margin-top: 30px;
+  // border-radius: 10px;
+  // border-color: red;
+  // border-width: 2px;
+  // width: 370px;
+  flex-basis: calc((100% - 60px) / 3);
+  height: 270px;
+}
+.letter:nth-child(3n + 1) {
+  margin-left: 0;
+}
+
+.letter-img {
+  /* width: 370px;
+  height: 270px; */
+  object-fit: cover;
+  height: 270px;
+  border: 5px solid royalblue;
+  border-radius: 30px;
+}
+.letter-name {
+  font-size: 200px;
+  font-weight: 700;
+  color: #73dd55;
+}
+
+.letter:hover .overlay,
+.letter:focus .overlay {
+  transform: translatex(0);
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 149, 235, 0.5);
+
+  transform: translatex(-100%);
+  transition: transform 250ms ease;
+}

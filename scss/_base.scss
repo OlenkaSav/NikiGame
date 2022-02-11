@@ -1,0 +1,45 @@
+:root {
+  --title-text-colour: hsl(244, 12%, 27%);
+  --primary-text-colour: #757575;
+  --accent-colour: #2196f3;
+  --background-color: rgb(178, 236, 130);
+  --main-bg-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 0;
+  background-color: whitesmoke;
+  color: rgb(78, 6, 78);
+  font-family: "Balsamiq Sans", cursive;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+main h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+main p {
+  font-size: 30px;
+}
